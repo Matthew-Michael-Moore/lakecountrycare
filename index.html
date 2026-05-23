@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Lake Country Care | Premium Lawn Care & Landscaping</title>
+
+<meta name="description" content="Professional lawn care and landscaping services in Lake Country, Wisconsin. Weekly mowing, mulch, cleanup, hedge trimming, and property maintenance." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --green:#215c3c;
+  --green-dark:#163e29;
+  --green-light:#eaf4ed;
+  --black:#111111;
+  --gray:#666;
+  --light:#f7f8f7;
+  --white:#ffffff;
+  --border:#e8e8e8;
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  background:var(--white);
+  color:var(--black);
+  overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 7%;
+
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.logo{
+  font-size:1.2rem;
+  font-weight:800;
+  color:var(--green);
+  letter-spacing:-0.5px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--black);
+  font-size:14px;
+  font-weight:500;
+  transition:.25s ease;
+}
+
+.nav-links a:hover{
+  color:var(--green);
+}
+
+.nav-btn{
+  background:var(--green);
+  color:white!important;
+  padding:11px 18px;
+  border-radius:10px;
+}
+
+/* HERO */
+
+header{
+  min-height:100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.48)),
+  url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  padding:120px 20px 80px;
+}
+
+.hero{
+  max-width:950px;
+  color:white;
+}
+
+.hero-tag{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.18);
+  padding:10px 16px;
+  border-radius:999px;
+  margin-bottom:24px;
+  font-size:14px;
+  backdrop-filter:blur(8px);
+}
+
+.hero h1{
+  font-size:5rem;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-2px;
+}
+
+.hero p{
+  margin-top:28px;
+  font-size:1.2rem;
+  line-height:1.8;
+  opacity:.92;
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.hero-buttons{
+  margin-top:38px;
+
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:16px 24px;
+  border-radius:12px;
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.btn-primary{
+  background:var(--green);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--green-dark);
+  transform:translateY(-3px);
+}
+
+.btn-secondary{
+  background:white;
+  color:var(--black);
+}
+
+.btn-secondary:hover{
+  transform:translateY(-3px);
+}
+
+/* GENERAL */
+
+.container{
+  width:min(1200px,92%);
+  margin:auto;
+}
+
+section{
+  padding:110px 0;
+}
+
+.section-top{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-top h2{
+  font-size:3rem;
+  letter-spacing:-1px;
+  margin-bottom:14px;
+}
+
+.section-top p{
+  color:var(--gray);
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin-top:50px;
+}
+
+.stat{
+  background:var(--light);
+  padding:35px;
+  border-radius:var(--radius);
+  text-align:center;
+}
+
+.stat h3{
+  font-size:2.3rem;
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.stat p{
+  color:var(--gray);
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.service-card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px;
+  transition:.3s ease;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.service-icon{
+  width:60px;
+  height:60px;
+  border-radius:14px;
+  background:var(--green-light);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:22px;
+}
+
+.service-card h3{
+  margin-bottom:12px;
+  font-size:1.3rem;
+}
+
+.service-card p{
+  color:var(--gray);
+  line-height:1.7;
+}
+
+.service-price{
+  margin-top:18px;
+  color:var(--green);
+  font-weight:700;
+}
+
+/* PROCESS */
+
+.process{
+  background:var(--light);
+}
+
+.process-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+}
+
+.process-card{
+  background:white;
+  padding:35px;
+  border-radius:var(--radius);
+}
+
+.process-number{
+  font-size:3rem;
+  font-weight:800;
+  color:var(--green-light);
+  margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:.3s ease;
+}
+
+.gallery img:hover{
+  transform:scale(1.02);
+}
+
+/* QUOTE */
+
+.quote-wrap{
+  background:linear-gradient(135deg,var(--green),var(--green-dark));
+  color:white;
+  border-radius:28px;
+  padding:60px;
+}
+
+.quote-wrap h2{
+  text-align:center;
+  font-size:2.8rem;
+  margin-bottom:12px;
+}
+
+.quote-wrap p{
+  text-align:center;
+  opacity:.9;
+  margin-bottom:40px;
+}
+
+.calculator{
+  max-width:650px;
+  margin:auto;
+  background:white;
+  color:black;
+  border-radius:22px;
+  padding:35px;
+}
+
+.calculator label{
+  font-weight:600;
+}
+
+.calculator select,
+.calculator input,
+.calculator textarea{
+  width:100%;
+  margin-top:10px;
+  margin-bottom:18px;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  font-size:15px;
+}
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.check input{
+  width:auto;
+  margin:0;
+}
+
+.result{
+  margin-top:20px;
+  text-align:center;
+  font-size:2rem;
+  font-weight:800;
+  color:var(--green);
+}
+
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.contact-info{
+  background:var(--green);
+  color:white;
+  padding:45px;
+  border-radius:24px;
+}
+
+.contact-info h3{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.contact-info p{
+  line-height:1.8;
+  opacity:.95;
+  margin-bottom:20px;
+}
+
+.contact-box{
+  margin-top:26px;
+}
+
+.contact-box div{
+  margin-bottom:14px;
+}
+
+.contact-form{
+  background:white;
+  border:1px solid var(--border);
+  padding:40px;
+  border-radius:24px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  margin-bottom:18px;
+  font-size:15px;
+}
+
+.contact-form button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:var(--green);
+  color:white;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.contact-form button:hover{
+  background:var(--green-dark);
+}
+
+/* FOOTER */
+
+footer{
+  background:#101010;
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+  margin-top:80px;
+}
+
+footer p{
+  opacity:.8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:3.2rem;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    padding:16px 5%;
+  }
+
+  .nav-links{
+    gap:16px;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:2.6rem;
+  }
+
+  .section-top h2{
+    font-size:2.2rem;
+  }
+
+  .quote-wrap{
+    padding:30px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+  <div class="logo">
+    Lake Country Care
+  </div>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#quote">Quote</a>
+    <a href="#contact" class="nav-btn">Contact</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<header id="top">
+
+  <div class="hero">
+
+    <div class="hero-tag">
+      Premium Lawn Care & Landscaping • Lake Country, WI
+    </div>
+
+    <h1>
+      Professional Landscaping That Actually Shows Up
+    </h1>
+
+    <p>
+      Reliable mowing, landscaping, cleanup, and property maintenance for homeowners who want their yard looking sharp without the stress of chasing down contractors.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#quote" class="btn btn-primary">
+        Get Instant Quote
+      </a>
+
+      <a href="#contact" class="btn btn-secondary">
+        Request Service
+      </a>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-top">
+      <h2>Reliable Service. Professional Results.</h2>
+
+      <p>
+        Lake Country Care provides premium residential lawn care and landscaping services throughout the Lake Country area. We focus on communication, consistency, and clean results that improve curb appeal year-round.
+      </p>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <h3>24h</h3>
+        <p>Average response time</p>
+      </div>
+
+      <div class="stat">
+        <h3>Weekly</h3>
+        <p>Recurring maintenance available</p>
+      </div>
+
+      <div class="stat">
+        <h3>Fully</h3>
+        <p>Residential-focused service</p>
+      </div>
+
+      <div class="stat">
+        <h3>Clean</h3>
+        <p>Professional finish every visit</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-top">
+      <h2>Professional Services</h2>
+
+      <p>
+        Full-service residential lawn care and landscaping designed to keep your property clean, maintained, and professionally cared for year-round.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- CORE SERVICES -->
+
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <h3>Weekly Lawn Mowing</h3>
+        <p>
+          Precision mowing, trimming, edging, and cleanup for a consistently sharp lawn.
+        </p>
+        <div class="service-price">
+          Starting at $40/visit
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌿</div>
+        <h3>String Trimming</h3>
+        <p>
+          Clean trimming around fences, landscaping, mailboxes, and hard-to-reach areas.
+        </p>
+        <div class="service-price">
+          Included with mowing
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🧱</div>
+        <h3>Edging Services</h3>
+        <p>
+          Sharp edging along sidewalks, driveways, patios, and landscape beds.
+        </p>
+        <div class="service-price">
+          Premium curb appeal finish
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🍃</div>
+        <h3>Property Blow-Off</h3>
+        <p>
+          Grass clipping and debris cleanup for a polished final appearance after service.
+        </p>
+        <div class="service-price">
+          Included with mowing
+        </div>
+      </div>
+
+      <!-- LANDSCAPING -->
+
+      <div class="service-card">
+        <div class="service-icon">🌱</div>
+        <h3>Garden Bed Maintenance</h3>
+        <p>
+          Weed removal, cleanup, edge redefining, and ongoing bed upkeep.
+        </p>
+        <div class="service-price">
+          Quote-based pricing
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🪵</div>
+        <h3>Mulch Installation</h3>
+        <p>
+          Fresh mulch installation to improve appearance and suppress weeds.
+        </p>
+        <div class="service-price">
+          Custom pricing available
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌳</div>
+        <h3>Hedge & Shrub Trimming</h3>
+        <p>
+          Professional shaping and trimming for shrubs, bushes, and decorative hedges.
+        </p>
+        <div class="service-price">
+          Starting around $50
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌸</div>
+        <h3>Flower Planting</h3>
+        <p>
+          Seasonal flower installation and small decorative landscaping enhancements.
+        </p>
+        <div class="service-price">
+          Seasonal service
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏡</div>
+        <h3>Landscape Refreshes</h3>
+        <p>
+          Small landscaping improvements that dramatically upgrade curb appeal.
+        </p>
+        <div class="service-price">
+          Custom quote
+        </div>
+      </div>
+
+      <!-- SEASONAL -->
+
+      <div class="service-card">
+        <div class="service-icon">🍂</div>
+        <h3>Spring Cleanup</h3>
+        <p>
+          Full property cleanup after winter including leaves, sticks, and debris removal.
+        </p>
+        <div class="service-price">
+          Seasonal pricing
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🍁</div>
+        <h3>Fall Cleanup</h3>
+        <p>
+          Heavy leaf removal and seasonal cleanup to prepare your yard for winter.
+        </p>
+        <div class="service-price">
+          Quote-based pricing
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌪️</div>
+        <h3>Storm Debris Cleanup</h3>
+        <p>
+          Branch pickup, stick cleanup, and debris hauling after storms or heavy winds.
+        </p>
+        <div class="service-price">
+          Emergency scheduling available
+        </div>
+      </div>
+
+      <!-- PREMIUM ADD-ONS -->
+
+      <div class="service-card">
+        <div class="service-icon">🧼</div>
+        <h3>Pressure Washing</h3>
+        <p>
+          Patio, sidewalk, and driveway pressure washing for a cleaner exterior appearance.
+        </p>
+        <div class="service-price">
+          Starting around $75
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🪧</div>
+        <h3>Fence Line Cleanup</h3>
+        <p>
+          Weed trimming and cleanup along fence lines and property edges.
+        </p>
+        <div class="service-price">
+          Add-on service available
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🧹</div>
+        <h3>Garage & Yard Cleanup</h3>
+        <p>
+          General outdoor cleanup services before parties, sales, or seasonal transitions.
+        </p>
+        <div class="service-price">
+          Flexible hourly pricing
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="process" id="process">
+
+  <div class="container">
+
+    <div class="section-top">
+      <h2>Simple Process</h2>
+
+      <p>
+        Fast communication and reliable scheduling without the usual contractor headaches.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <h3>Request a Quote</h3>
+        <p>
+          Fill out the contact form or use the instant quote calculator.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <h3>Property Review</h3>
+        <p>
+          We confirm project scope, pricing, and scheduling details.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <h3>Professional Service</h3>
+        <p>
+          Your property gets completed professionally and consistently.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+  <div class="container">
+
+    <div class="section-top">
+      <h2>Recent Work</h2>
+
+      <p>
+        Clean properties, sharp edging, maintained landscaping, and consistent results.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1599687267812-35c1f9b8d3e0?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1598908314732-07113901949e?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section id="quote">
+
+  <div class="container">
+
+    <div class="quote-wrap">
+
+      <h2>Instant Quote Calculator</h2>
+
+      <p>
+        Build a custom estimate based on your property and requested services.
+      </p>
+
+      <div class="calculator">
+
+        <label>Property Size</label>
+
+        <select id="size" onchange="calc()">
+          <option value="45">Small Residential</option>
+          <option value="70">Medium Residential</option>
+          <option value="95">Large Residential</option>
+        </select>
+
+        <!-- CORE -->
+
+        <div class="check">
+          <input type="checkbox" id="mowing" onchange="calc()" checked>
+          <span>Weekly Lawn Mowing</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="edging" onchange="calc()">
+          <span>Edging Services</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="beds" onchange="calc()">
+          <span>Garden Bed Maintenance</span>
+        </div>
+
+        <!-- LANDSCAPING -->
+
+        <div class="check">
+          <input type="checkbox" id="mulch" onchange="calc()">
+          <span>Mulch Installation</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="hedge" onchange="calc()">
+          <span>Hedge & Shrub Trimming</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="flowers" onchange="calc()">
+          <span>Flower Planting</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="refresh" onchange="calc()">
+          <span>Landscape Refresh</span>
+        </div>
+
+        <!-- SEASONAL -->
+
+        <div class="check">
+          <input type="checkbox" id="spring" onchange="calc()">
+          <span>Spring Cleanup</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="fall" onchange="calc()">
+          <span>Fall Cleanup</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="storm" onchange="calc()">
+          <span>Storm Debris Cleanup</span>
+        </div>
+
+        <!-- PREMIUM -->
+
+        <div class="check">
+          <input type="checkbox" id="pressure" onchange="calc()">
+          <span>Pressure Washing</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="fence" onchange="calc()">
+          <span>Fence Line Cleanup</span>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="garage" onchange="calc()">
+          <span>Garage & Yard Cleanup</span>
+        </div>
+
+        <label>Service Frequency</label>
+
+        <select id="freq" onchange="calc()">
+          <option value="1">One-Time Service</option>
+          <option value="0.85">Weekly Service</option>
+          <option value="0.93">Bi-Weekly Service</option>
+        </select>
+
+        <div class="result" id="result">
+          $0 - $0
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-top">
+      <h2>Contact Us</h2>
+
+      <p>
+        Ready for reliable lawn care and landscaping? Reach out and we’ll get back to you quickly.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <h3>Lake Country Care</h3>
+
+        <p>
+          Residential lawn care and landscaping services for homeowners throughout the Lake Country area.
+        </p>
+
+        <div class="contact-box">
+
+          <div>
+            Email: info@lakecountrycare.com
+          </div>
+
+          <div>
+            Phone: (262) 555-1234
+          </div>
+
+          <div>
+            Service Area: Lake Country, Wisconsin
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+      >
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <input
+          type="text"
+          name="address"
+          placeholder="Property Address"
+        >
+
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Tell us about the work you need done..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Request Service
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>
+    © 2026 Lake Country Care Landscaping • Professional Lawn Care & Landscaping
+  </p>
+</footer>
+
+<script>
+
+function calc(){
+
+  let base =
+    parseInt(
+      document.getElementById("size").value
+    );
+
+  let min = base;
+  let max = base + 20;
+
+  /* CORE */
+
+  if(document.getElementById("edging").checked){
+    min += 10;
+    max += 30;
+  }
+
+  if(document.getElementById("beds").checked){
+    min += 35;
+    max += 120;
+  }
+
+  /* LANDSCAPING */
+
+  if(document.getElementById("mulch").checked){
+    min += 90;
+    max += 300;
+  }
+
+  if(document.getElementById("hedge").checked){
+    min += 40;
+    max += 140;
+  }
+
+  if(document.getElementById("flowers").checked){
+    min += 50;
+    max += 180;
+  }
+
+  if(document.getElementById("refresh").checked){
+    min += 120;
+    max += 450;
+  }
+
+  /* SEASONAL */
+
+  if(document.getElementById("spring").checked){
+    min += 80;
+    max += 250;
+  }
+
+  if(document.getElementById("fall").checked){
+    min += 90;
+    max += 300;
+  }
+
+  if(document.getElementById("storm").checked){
+    min += 60;
+    max += 220;
+  }
+
+  /* PREMIUM */
+
+  if(document.getElementById("pressure").checked){
+    min += 85;
+    max += 250;
+  }
+
+  if(document.getElementById("fence").checked){
+    min += 30;
+    max += 90;
+  }
+
+  if(document.getElementById("garage").checked){
+    min += 50;
+    max += 180;
+  }
+
+  let frequency =
+    parseFloat(
+      document.getElementById("freq").value
+    );
+
+  min *= frequency;
+  max *= frequency;
+
+  document.getElementById("result").innerHTML =
+    "$" +
+    Math.round(min) +
+    " - $" +
+    Math.round(max);
+
+}
+
+calc();
+
+</script>
+</body>
+</html>
